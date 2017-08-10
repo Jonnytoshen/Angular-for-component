@@ -1,0 +1,20 @@
+<div class="container-full">
+    <br>
+    <div>
+        <div class="col-md-8">
+            <div *ngFor="let item of items">
+                <aol-form-view [status]="status" [index]="item" (evt)="onEvt($event)" (remove)="onRemove($event)"></aol-form-view>
+            </div>
+            <div>
+                <button class="btn btn-primary" (click)="onAdd()">Add Component</button>
+                <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <figure class="highlight">
+                <pre><code>{{result}}</code></pre>
+            </figure>
+        </div>
+    </div>
+    <br>
+</div>
